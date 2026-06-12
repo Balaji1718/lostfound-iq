@@ -230,15 +230,14 @@ function Hero() {
           initial="hidden" animate="visible" variants={fadeUp} transition={{ delay: 0.3 }}
           className="mx-auto mt-10 flex flex-wrap items-center justify-center gap-x-8 gap-y-3 text-sm text-muted-foreground"
         >
-          {[
+          {([
             ["Institution-grade security", ShieldCheck],
             ["Verified claim workflow", BadgeCheck],
             ["Real-time notifications", Bell],
-          ].map(([t, Icon]) => (
-            <li key={t as string} className="flex items-center gap-2">
-              {/* @ts-expect-error icon component */}
+          ] as const).map(([t, Icon]) => (
+            <li key={t} className="flex items-center gap-2">
               <Icon className="h-4 w-4 text-primary" />
-              <span>{t as string}</span>
+              <span>{t}</span>
             </li>
           ))}
         </motion.ul>
