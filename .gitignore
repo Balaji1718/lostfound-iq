@@ -6,27 +6,39 @@ yarn-debug.log*
 yarn-error.log*
 pnpm-debug.log*
 lerna-debug.log*
+firebase-debug.log
 
-node_modules
-dist
-dist-ssr
-.output
-.vinxi
-.tanstack/**
-.nitro
-*.local
+# Node & Build directories
+node_modules/
+dist/
+dist-ssr/
+build/
+.output/
+.vinxi/
+.tanstack/
+.nitro/
+.vercel/
+.firebase/
+.vite/
 
-# Wrangler / Cloudflare
-.wrangler/
-.dev.vars
+# Environment files
+.env
+.env.local
+.env.development
+.env.production
+.env.*.local
 
 # Editor directories and files
 .vscode/*
 !.vscode/extensions.json
-.idea
+.idea/
 .DS_Store
 *.suo
 *.ntvs*
 *.njsproj
 *.sln
 *.sw?
+
+# Wrangler / Cloudflare
+.wrangler/
+.dev.vars
