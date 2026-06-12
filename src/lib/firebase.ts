@@ -1,16 +1,16 @@
-// Firebase initialization. Safe-fails when env vars aren't set so the
-// landing page still renders during local previews without credentials.
+// Firebase initialization. Uses the project's public Firebase config.
+// These are client-safe keys; they are exposed to browsers by design.
 import { initializeApp, getApps, type FirebaseApp } from "firebase/app";
 import { getFirestore, type Firestore } from "firebase/firestore";
 
 const config = {
-  apiKey: import.meta.env.VITE_FIREBASE_API_KEY,
-  authDomain: import.meta.env.VITE_FIREBASE_AUTH_DOMAIN,
-  projectId: import.meta.env.VITE_FIREBASE_PROJECT_ID,
-  storageBucket: import.meta.env.VITE_FIREBASE_STORAGE_BUCKET,
-  messagingSenderId: import.meta.env.VITE_FIREBASE_MESSAGING_SENDER_ID,
-  appId: import.meta.env.VITE_FIREBASE_APP_ID,
-  measurementId: import.meta.env.VITE_FIREBASE_MEASUREMENT_ID,
+  apiKey: "AIzaSyAgha1-KMhTirWjVjeniAljPv8WycghWeQ",
+  authDomain: "findback-a68a1.firebaseapp.com",
+  projectId: "findback-a68a1",
+  storageBucket: "findback-a68a1.firebasestorage.app",
+  messagingSenderId: "631704216729",
+  appId: "1:631704216729:web:8d4a849cea158f6a64c408",
+  measurementId: "G-463Y9L8X0N",
 };
 
 export const isFirebaseConfigured = Boolean(
