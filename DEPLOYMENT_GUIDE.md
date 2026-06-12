@@ -10,11 +10,11 @@ This guide details how to deploy the FindBack monorepo to production environment
 
 Vercel automatically detects the TanStack Start framework. Since this project is a monorepo, follow these settings when configuring Vercel:
 
-1. **Framework Preset:** `TanStack Start` (or `Vite`)
+1. **Framework Preset:** `TanStack Start` (or `Other` / `Vite`)
 2. **Root Directory:** `frontend`
 3. **Build Command:** `npm run build`
-4. **Output Directory:** `dist`
-5. **Environment Variables:** If connecting to custom Firebase projects, add your custom `VITE_FIREBASE_*` variables.
+4. **Output Directory:** **Leave default / empty** (Do NOT override to `dist`. Vinxi/Nitro will automatically build into `.vercel/output`).
+5. **Environment Variables:** Define your custom `VITE_FIREBASE_*` configuration variables in Vercel's Project Dashboard.
 
 ---
 

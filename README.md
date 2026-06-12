@@ -118,5 +118,5 @@ Follow these settings when creating a new project on Vercel:
 1. **Root Directory:** Set the root directory to `frontend`.
 2. **Framework Preset:** Select `Vite` or `Other`.
 3. **Build Command:** `npm run build`
-4. **Output Directory:** `.vercel/output` or leave default for automatic Vite/Vinxi builder detection.
+4. **Output Directory:** **Leave default / empty** (Do NOT override to `dist`. Vinxi/Nitro will automatically build into `.vercel/output`).
 5. **Environment Variables:** Define the standard `VITE_FIREBASE_*` variables matching the production Firebase project.
